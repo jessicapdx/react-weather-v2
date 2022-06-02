@@ -28,7 +28,7 @@ export default function WeatherInfo(weatherData) {
           <ul className="list-unstyled">
             <li>Precipitation: 15%</li>
             <li>Humidity: {resp.humidity}%</li>
-            <li>Wind: {resp.wind} km/h</li>
+            <li>Wind: {resp.wind} mph</li>
           </ul>
         </div>
       </div>
