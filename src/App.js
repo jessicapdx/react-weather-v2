@@ -8,6 +8,7 @@ export default function App() {
         <a
           href="https://github.com/jessicapdx/react-weather-v2"
           target="_blank"
+          rel="noreferrer"
         >
           Open source code by Jessica Barrows-Butler
         </a>
