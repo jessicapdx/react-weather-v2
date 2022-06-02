@@ -1,8 +1,10 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(weatherData) {
   let resp = weatherData.data;
+  console.log(resp);
   return (
     <div className="WeatherInfo">
       <h1>{resp.name}</h1>
@@ -14,15 +16,9 @@ export default function WeatherInfo(weatherData) {
       </ul>
       <div className="row mt-3">
         <div className="col-6">
-          <div className="clearfix">
-            <img
-              src={resp.iconUrl}
-              alt={resp.description}
-              className="float-left"
-            />
-            <span className="temp">{Math.round(resp.temperature)}</span>
-            <span className="unit">℉</span>
-          </div>
+          <WeatherIcon code={resp.icon} alt={resp.description} />
+          <span className="temp">{Math.round(resp.temperature)}</span>
+          <span className="unit">℉</span>
         </div>
         <div className="col-6">
           <ul className="list-unstyled">

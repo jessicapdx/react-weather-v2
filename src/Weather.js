@@ -4,6 +4,7 @@ import "./Weather.css";
 import axios from "axios";
 
 export default function Weather(props) {
+  const baseUrl = `http://openweathermap.org/`;
   const [city, setCity] = useState(props.defaultCity);
   const [weatherData, setWeatherData] = useState({ ready: false });
 
@@ -17,12 +18,13 @@ export default function Weather(props) {
       date: new Date(resp.dt * 1000),
       description: resp.weather[0].description,
       humidity: resp.main.humidity,
-      iconUrl: "//ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
+      iconUrl: `${baseUrl}img/wn/${resp.weather[0].icon}@2x.png`,
+      icon: resp.weather[0].icon,
       name: resp.name,
       //TODO: precipitation
       ready: true,
       temperature: resp.main.temp,
-      wind: resp.wind.speed,
+      wind: Math.round(resp.wind.speed),
     });
   }
 

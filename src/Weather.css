@@ -17,11 +17,12 @@
   margin: 20px 0 0 0;
 }
 
-.Weather img {
+.WeatherIcon {
   display: inline-block;
   height: 64px;
   margin-right: 10px;
   width: 64px;
+  vertical-align: center;
 }
 
 .Weather li {
