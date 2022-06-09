@@ -1,0 +1,26 @@
+.DailyWeather {
+    text-align: center;
+}
+
+.DailyWeather-day {
+    display: inline-block;
+    color: #202124;
+    font-weight: normal;
+    line-height: 15px;
+    text-align: center;
+}
+
+.DailyWeather-icon {
+    padding: 0 5px 0 12px;
+}
+
+.DailyWeather-temp-day {
+    color: #202124;
+    font-weight: bold;
+    padding: 2px;
+}
+
+.DailyWeather-temp-night {
+    font-weight: lighter;
+    padding: 2px;
+}
