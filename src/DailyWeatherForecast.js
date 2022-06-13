@@ -6,7 +6,6 @@ import axios from "axios";
 export default function DailyWeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
-  console.log(props);
 
   useEffect(() => {
     setLoaded(false);
