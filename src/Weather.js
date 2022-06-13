@@ -21,6 +21,8 @@ export default function Weather(props) {
       humidity: resp.main.humidity,
       iconUrl: `${baseUrl}img/wn/${resp.weather[0].icon}@2x.png`,
       icon: resp.weather[0].icon,
+      lat: resp.coord.lat,
+      lon: resp.coord.lon,
       name: resp.name,
       //TODO: precipitation
       ready: true,
@@ -64,7 +66,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <DailyWeatherForecast />
+        <DailyWeatherForecast coordinates={weatherData.coord} />
       </div>
     );
   } else {
