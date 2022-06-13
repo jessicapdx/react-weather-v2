@@ -24,7 +24,6 @@ export default function Weather(props) {
       lat: resp.coord.lat,
       lon: resp.coord.lon,
       name: resp.name,
-      //TODO: precipitation
       ready: true,
       temperature: resp.main.temp,
       wind: Math.round(resp.wind.speed),

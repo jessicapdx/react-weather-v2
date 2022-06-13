@@ -14,7 +14,6 @@ export default function WeatherInfo(weatherData) {
         </div>
         <div className="col-4">
           <ul className="list-unstyled WeatherInfo-details">
-            <li>Precipitation: 15%</li>
             <li>Humidity: {resp.humidity}%</li>
             <li>Wind: {resp.wind} mph</li>
           </ul>
